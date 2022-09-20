@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="background-color:rgb(238, 202, 202); border: 2px solid black; padding: 20px; font-size: large;">
+        <h2>Please find customer's rating data for multiple restaurants as:</h2><br>
+        <div>
+            ⮚ RatingData = [<br>
+            {restaurant: 'KFC', rating:5},<br>
+            {restaurant: 'Burger King', rating:4},<br>
+            {restaurant: 'KFC', rating:3},<br>
+            {restaurant: 'Domino', rating:2},<br>
+            {restaurant: 'Subway', rating:3},<br>
+            {restaurant: 'Domino', rating:1},<br>
+            {restaurant: 'Subway', rating:4},<br>
+            restaurant: 'Pizza Hut', rating:5<br>
+            ] <br> <br>
+        </div>
+
+        <h3>a. Calculate the Average rating for all the restaurants. </h3>
+
+        Expected Response for a:[</br>
+        { restaurant: 'KFC', averageRating: 4},<br>
+        { restaurant: 'Burger King', averageRating: 4},<br>
+        { restaurant: 'Domino', averageRating: 1.5},<br>
+        { restaurant: 'Subway', averageRating: 3.5},<br>
+        { restaurant: 'Pizza Hut', averageRating: 5}
+        ] <br> <br>
+
+        <h3>b. List of all restaurants with average rating greater than or equal to 4. </h3>
+
+        Expected Response for b:[ <br>
+        { restaurant: 'KFC', averageRating: 4},<br>
+        { restaurant: 'Burger King', averageRating: 4},<br>
+        { restaurant: 'Pizza Hut', averageRating: 5} <br>
+        ]
+
+    </div>
+    <h1
+        style="background-color: rgb(219, 233, 20); color: rgb(223, 19, 19); padding: 5px; text-align: center; border-radius: 50%;">
+        TO SEE THE SOLUTION GO TO CONSOLE</h1>
+
+    <script>
+        //SOLUTION OF A -
+        const KFC = Array => Array.reduce((a, b) => a + b) / Array.length
+        console.log(KFC([5, 3]));
+
+        const BurgerKing = Array => Array.reduce((a, b) => a + b) / Array.length
+        console.log(BurgerKing([4]));
+
+        const Domino = Array => Array.reduce((a, b) => a + b) / Array.length
+        console.log(Domino([2, 1]));
+
+        const Subway = Array => Array.reduce((a, b) => a + b) / Array.length
+        console.log(Subway([3, 4]));
+
+        const PizzaHut = Array => Array.reduce((a, b) => a + b) / Array.length
+        console.log(PizzaHut([5]));
+
+        //SOLUTION OF B -
+        const arr = [4, 4, 1.5, 3.5, 5];
+        const rating = 4;
+        const findGreater = (arr, num) => {
+            const res = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < num) {
+                    continue;
+                };
+                res.push(arr[i]);
+            };
+            return res;
+        };
+        console.log(findGreater(arr, rating));
+    </script>
+</body>
+
+</html>
